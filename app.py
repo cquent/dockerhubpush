@@ -13,6 +13,7 @@ from flask import (
     g,
 )
 
+
 from dotenv import load_dotenv
 from extensions import db
 
