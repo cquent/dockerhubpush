@@ -12,8 +12,9 @@ from flask import (
     flash,
     g,
 )
+
 from dotenv import load_dotenv
-from extensions import db 
+from extensions import db
 
 load_dotenv()
 
@@ -43,11 +44,11 @@ def create_app():
 
     with app.app_context():
         from models import User, Task  # noqa: F401
+
         db.create_all()
 
     register_routes(app)
     return app
-
 
 
 def login_required(view):
